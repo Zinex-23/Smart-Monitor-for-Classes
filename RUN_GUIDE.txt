@@ -1,7 +1,10 @@
-[ WINDOWS USER - COPY ALL BELOW ]
+[ WINDOWS USER (CMD) ]
 python -m venv venv && venv\Scripts\activate && pip install -r requirements.txt && python app.py
+
+[ WINDOWS USER (PowerShell) ]
+python -m venv venv; .\venv\Scripts\Activate.ps1; pip install -r requirements.txt; python app.py
 
 --------------------------------------------------------------------------------
 
-[ LINUX / MACOS USER - COPY ALL BELOW ]
+[ LINUX / MACOS USER ]
 python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python3 app.py
