@@ -1,0 +1,141 @@
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --primary:       #667eea;
+  --primary-dark:  #764ba2;
+  --success:       #27ae60;
+  --danger:        #e74c3c;
+  --warning:       #f39c12;
+  --bg-gradient:   linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg:       #ffffff;
+  --card-shadow:   0 8px 32px rgba(0,0,0,0.10);
+  --card-radius:   16px;
+  --border:        #e2e8f0;
+  --text-main:     #1a1a2e;
+  --text-muted:    #6b7280;
+  --transition:    0.25s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Reduced-motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Page entrance ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp 0.55s cubic-bezier(.4,0,.2,1) both; }
+.animate-in:nth-child(1) { animation-delay: 0.05s; }
+.animate-in:nth-child(2) { animation-delay: 0.12s; }
+.animate-in:nth-child(3) { animation-delay: 0.19s; }
+.animate-in:nth-child(4) { animation-delay: 0.26s; }
+
+/* ── Spinner ───────────────────────────────────────────────── */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Students table ────────────────────────────────────────── */
+.students-table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+.students-table td,
+.students-table th {
+  padding: 13px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  min-width: 100px;
+}
+.students-table th {
+  background: var(--bg-gradient);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.students-table th:first-child { border-radius: 10px 0 0 0; }
+.students-table th:last-child  { border-radius: 0 10px 0 0; }
+.students-table tr:hover td    { background: #f8faff; }
+.students-table-container      { overflow-x: auto; }
+
+/* ── Toast notifications ───────────────────────────────────── */
+#toast-container {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+.toast {
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  animation: fadeInUp 0.3s ease both;
+  max-width: 300px;
+}
+.toast.success { background: var(--success); }
+.toast.error   { background: var(--danger); }
+.toast.info    { background: var(--primary); }
+
+/* ── User avatar pill ──────────────────────────────────────── */
+.user-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 50px;
+  padding: 6px 14px 6px 8px;
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+.user-pill:hover { background: rgba(255,255,255,0.3); }
+.user-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+}
+
+/* ── Empty state ───────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+}
+.empty-state i {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+  opacity: 0.35;
+  display: block;
+}
+.empty-state p { font-size: 0.95rem; line-height: 1.6; }
+
+/* ── Responsive tweaks ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .dashboard-grid { grid-template-columns: 1fr !important; }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .header-row { flex-direction: column; gap: 10px; align-items: flex-start !important; }
+  .btn-group  { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr !important; }
+}

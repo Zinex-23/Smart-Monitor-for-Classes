@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.settings }} - Smart Monitor Class{% endblock %}
+
+{% block navbar_title %}
+  <i class="fas fa-cog me-2 text-primary"></i>{{ t.settings }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-12 col-xl-10 mx-auto">
+            <div class="card shadow-sm" style="border-radius: 15px;">
+                <div class="card-body p-4">
+                    <form id="settingsForm">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label font-weight-bold">{{ t.morning_periods }}</label>
+                                <input type="number" class="form-control" name="morning_count" value="{{ config.morning_count }}" min="1" max="10">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label font-weight-bold">{{ t.morning_start_time }}</label>
+                                <input type="time" class="form-control" name="morning_start" value="{{ config.morning_start }}">
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label font-weight-bold">{{ t.afternoon_periods }}</label>
+                                <input type="number" class="form-control" name="afternoon_count" value="{{ config.afternoon_count }}" min="1" max="10">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label font-weight-bold">{{ t.afternoon_start_time }}</label>
+                                <input type="time" class="form-control" name="afternoon_start" value="{{ config.afternoon_start }}">
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label font-weight-bold">{{ t.lesson_length }}</label>
+                                <input type="number" class="form-control" name="lesson_duration" value="{{ config.lesson_duration }}" min="15" max="120">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label font-weight-bold">{{ t.break_length }}</label>
+                                <input type="number" class="form-control" name="break_duration" value="{{ config.break_duration }}" min="0" max="60">
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info border-0 mb-4" style="border-radius: 12px; background-color: rgba(59, 125, 221, 0.1);">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>{{ t.note }}:</strong> {{ t.config_note }}
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg py-3" style="border-radius: 12px; font-weight: bold;">
+                                <i class="fas fa-save me-2"></i>{{ t.save_settings }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('settingsForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const config = {};
+    formData.forEach((value, key) => {
+        config[key] = value;
+    });
+
+    fetch('/api/save_settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(config)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            alert('{{ t.save_success }}');
+            location.reload();
+        } else {
+            alert('{{ t.save_error }}: ' + data.message);
+        }
+    });
+});
+</script>
+{% endblock %}

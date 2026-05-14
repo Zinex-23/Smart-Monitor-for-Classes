@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+{% block title %}Lịch sử tiết học - Smart Monitor Class{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+    .flatpickr-calendar {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+        border: 1px solid rgba(0,0,0,0.05) !important;
+        border-radius: 15px !important;
+        padding: 5px;
+    }
+    .flatpickr-day.selected { background: #0d6efd !important; border-color: #0d6efd !important; }
+</style>
+{% endblock %}
+
+{% block navbar_title %}
+<div class="d-flex align-items-center">
+    <i class="fas fa-history me-2 text-primary"></i>
+    <span class="fw-bold">{{ t.history }}</span>
+    
+    <div class="ms-3 ms-md-5 d-flex align-items-center date-nav-container">
+        <button class="date-nav-btn" onclick="changeDate(-1)" title="{{ t.prev_day }}">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="date-display-card mx-1" id="datePickerTrigger">
+            <i class="fas fa-calendar-day me-2 text-primary"></i>
+            <span id="dateDisplayLabel">{{ selected_date }}</span>
+            <input type="text" id="historyDatePicker" class="d-none" value="{{ selected_date }}">
+        </div>
+        
+        <button class="date-nav-btn" onclick="changeDate(1)" title="{{ t.next_day }}">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-12">
+            <div class="timeline">
+                {% if not history %}
+                <div class="card shadow-sm border-0" style="border-radius: 15px;">
+                    <div class="card-body text-center p-5">
+                        <i class="fas fa-history fa-3x mb-3 text-muted opacity-25"></i>
+                        <p class="lead fw-bold">{{ t.no_history_data }}</p>
+                        <small class="text-muted">{{ t.auto_save_msg }}</small>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% for entry in history %}
+                <div class="timeline-item mb-5">
+                    <!-- Left info: Time & Lesson Name -->
+                    <div class="timeline-left">
+                        <div class="timeline-time fw-bold text-primary">{{ entry.time_range }}</div>
+                        <div class="timeline-lesson-name small text-muted">{{ entry.lesson_name }}</div>
+                        <div class="timeline-date x-small text-muted opacity-75">{{ entry.date }}</div>
+                    </div>
+
+                    <!-- Right card: AI Report & Stats -->
+                    <div class="card timeline-card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                        <div class="card-header bg-white py-3 border-0">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h6 class="mb-0 fw-bold text-dark">
+                                        <i class="fas fa-robot me-2 text-info"></i>{{ t.ai_comment }}
+                                    </h6>
+                                </div>
+                                <div class="col-md-5 d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0 fw-bold text-dark">
+                                        <i class="fas fa-chart-pie me-2 text-success"></i>{{ t.stats }}
+                                    </h6>
+                                    <button class="btn btn-link text-danger p-0 ms-2" onclick="deleteHistory('{{ entry.id }}')" title="Xóa">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="row g-4">
+                                <div class="col-md-7">
+                                    <div class="ai-report-content p-0" style="line-height: 1.8; font-size: 1.05rem; color: #333;">
+                                        {{ (entry.ai_report | report_lang(current_lang)) | safe if entry.ai_report else "..." }}
+                                    </div>
+                                </div>
+                                <div class="col-md-5 border-start">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless mb-0">
+                                            <tbody>
+                                                {% for emotion, score in entry.emotion_stats.items() %}
+                                                <tr>
+                                                    <td class="small py-1">{{ emotion | capitalize }}</td>
+                                                    <td class="py-1" style="min-width: 80px;">
+                                                        <div class="progress" style="height: 6px;">
+                                                            <div class="progress-bar bg-primary rounded-pill" role="progressbar" style="width: {{ [score, 100]|min }}%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-end small fw-bold py-1">{{ score }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const isVN = "{{ current_lang }}" === "vi";
+    const fp = flatpickr("#historyDatePicker", {
+        locale: isVN ? "vn" : "en",
+        dateFormat: "Y-m-d",
+        defaultDate: "{{ selected_date }}",
+        disableMobile: "true",
+        positionElement: document.getElementById('datePickerTrigger'),
+        static: false,
+        monthSelectorType: "static",
+        onChange: function(selectedDates, dateStr) {
+            goToDate(dateStr);
+        }
+    });
+
+    document.getElementById('datePickerTrigger').onclick = function() {
+        fp.open();
+    };
+});
+
+function goToDate(dateStr) {
+    if (dateStr) {
+        window.location.href = `/history?date=${dateStr}`;
+    }
+}
+
+function changeDate(days) {
+    const picker = document.getElementById('historyDatePicker');
+    if (!picker) return;
+    
+    // Use selected_date from template as base if picker value is missing
+    let val = picker.value || "{{ selected_date }}";
+    const currentDate = new Date(val);
+    
+    if (isNaN(currentDate.getTime())) return;
+    
+    currentDate.setDate(currentDate.getDate() + days);
+    
+    const y = currentDate.getFullYear();
+    const m = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const d = String(currentDate.getDate()).padStart(2, '0');
+    
+    goToDate(`${y}-${m}-${d}`);
+}
+
+function deleteHistory(id) {
+    if (confirm('{{ t.delete_confirm }}')) {
+        fetch('/api/delete_history', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: id })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                location.reload();
+            } else {
+                alert('Lỗi: ' + data.message);
+            }
+        });
+    }
+}
+</script>
+
+<style>
+.date-nav-container {
+    background: rgba(255,255,255,0.95);
+    padding: 4px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+
+.date-nav-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: var(--smc-transition);
+}
+
+.date-nav-btn:hover {
+    background: #f0f7ff;
+    color: #0d6efd;
+    transform: scale(1.1);
+}
+
+.date-nav-btn:active {
+    transform: scale(0.9);
+}
+
+.date-display-card {
+    padding: 6px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #222;
+    user-select: none;
+    border-radius: 50px;
+    transition: var(--smc-transition);
+    font-size: 0.9rem;
+}
+
+.date-display-card:hover {
+    background: rgba(13, 110, 253, 0.08);
+    color: #0d6efd;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 95px; /* Space for timeline-left */
+    border-left: 2px dashed #dee2e6;
+    margin-left: 10px; /* Minimal margin from container edge */
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    transition: var(--smc-transition);
+}
+
+/* Timeline dot */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 3px solid #0d6efd;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+}
+
+.timeline-left {
+    position: absolute;
+    left: -95px; /* Position to the left of the dashed line */
+    width: 85px;
+    text-align: right;
+    padding-top: 18px;
+}
+
+.timeline-time {
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.timeline-lesson-name {
+    font-weight: 500;
+    margin-top: 2px;
+    font-size: 0.8rem;
+}
+
+.timeline-date {
+    font-size: 0.7rem;
+}
+
+.timeline-card {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.ai-report-content {
+    border-radius: var(--smc-radius-md) !important;
+}
+
+.x-small { font-size: 0.75rem; }
+
+@media (max-width: 768px) {
+    .timeline { padding-left: 30px; margin-left: 15px; }
+    .timeline-left { position: static; width: 100%; text-align: left; margin-bottom: 10px; }
+    .timeline-item { flex-direction: column; }
+    .timeline-item::before { left: -36px; }
+}
+</style>
+{% endblock %}

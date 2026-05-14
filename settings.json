@@ -1,0 +1,10 @@
+{
+    "0": {
+        "morning_count": "4",
+        "morning_start": "07:30",
+        "afternoon_count": "4",
+        "afternoon_start": "13:30",
+        "lesson_duration": "45",
+        "break_duration": "5"
+    }
+}

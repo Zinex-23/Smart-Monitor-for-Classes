@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.live_camera }} - Smart Monitor Class{% endblock %}
+
+{% block navbar_title %}
+  <i class="fas fa-camera me-2 text-primary"></i>{{ t.live_camera }}
+{% endblock %}
+
+{% block content %}
+<div class="mb-4 px-3 pt-2">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <small class="text-muted">{{ t.monitor_live_sub }}</small>
+    </div>
+    <div id="statusIndicator" class="badge bg-light text-dark border p-2">
+      <span id="statusDot" class="smc-dot bg-danger"></span>
+      <span id="statusText">{{ t.status_offline }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="row g-3 px-3 mb-4">
+  <div class="col-12 col-xl-9 mx-auto">
+    <div class="card shadow-sm">
+      <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+        <h5 class="card-title mb-0">
+          <i class="fas fa-video me-2 text-primary"></i>
+          {{ t.live_stream }}
+        </h5>
+        
+        <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">
+          <i class="fas fa-signal me-1"></i> {{ t.live_badge }}
+        </div>
+      </div>
+      
+      <div class="card-body p-0 position-relative bg-dark overflow-hidden" style="min-height: 480px; display: flex; align-items: center; justify-content: center;">
+        
+        <!-- Video Feed -->
+        <img id="videoFeed" src="{{ url_for('video_feed') }}" 
+             style="display: none; max-width: 100%; max-height: 600px; object-fit: contain;">
+
+        <!-- Placeholder -->
+        <div id="cameraPlaceholder" class="text-center text-white py-5">
+          <div class="mb-4">
+            <i class="fas fa-video-slash fa-4x opacity-25"></i>
+          </div>
+          <h5>{{ t.camera_off }}</h5>
+          <p class="text-muted small px-4">{{ t.camera_off_sub }}</p>
+          
+          {% if data_source == 'simulation' %}
+          <div class="alert alert-info mx-4 mt-3 py-2 small">
+            <i class="fas fa-info-circle me-1"></i>
+            {{ t.sim_mode_msg }} <br>
+            {{ t.sim_mode_sub }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="card-footer bg-white py-3">
+        <div class="row g-2">
+          <div class="col-sm-6">
+            <button id="toggleBtn" class="btn btn-primary w-100 py-2" 
+                    onclick="toggleCamera()" data-mode="camera">
+              <i class="fas fa-play me-1"></i> {{ t.turn_on_camera }}
+            </button>
+          </div>
+          <div class="col-sm-6">
+            <button id="captureBtn" class="btn btn-outline-secondary w-100 py-2" onclick="captureImage()">
+              <i class="fas fa-camera me-1"></i> {{ t.capture_class }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Smart Monitor Class - Giám sát cảm xúc học sinh theo thời gian thực">
+  <title>Smart Monitor Class</title>
+
+  <!-- AdminKit CSS -->
+  <link href="{{ url_for('static', filename='adminkit/css/app.css') }}" rel="stylesheet">
+  <!-- Smart Monitor custom CSS -->
+  <link href="{{ url_for('static', filename='css/smart-monitor.css') }}" rel="stylesheet">
+  <!-- Font Awesome icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="toast-container"></div>
+
+<div class="wrapper">
+
+  <!-- ── SIDEBAR ──────────────────────────────────────────── -->
+  <nav id="sidebar" class="sidebar js-sidebar">
+    <div class="sidebar-content js-simplebar">
+
+      <a class="sidebar-brand" href="#">
+        <i class="fas fa-brain me-2"></i>
+        <span class="align-middle">Smart Monitor</span>
+      </a>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-header">Điều hướng</li>
+
+        <li class="sidebar-item active">
+          <a class="sidebar-link" href="#overview">
+            <i class="align-middle fas fa-tachometer-alt"></i>
+            <span class="align-middle">Tổng quan</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#camera-section">
+            <i class="align-middle fas fa-video"></i>
+            <span class="align-middle">Camera giám sát</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#report-section">
+            <i class="align-middle fas fa-file-alt"></i>
+            <span class="align-middle">Báo cáo lớp học</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#students-section">
+            <i class="align-middle fas fa-users"></i>
+            <span class="align-middle">Cảm xúc học sinh</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- ── END SIDEBAR ──────────────────────────────────────── -->
+
+
+  <!-- ── MAIN ─────────────────────────────────────────────── -->
+  <div class="main">
+
+    <!-- ── TOP NAVBAR ──────────────────────────────────────── -->
+    <nav class="navbar navbar-expand navbar-light navbar-bg">
+      <a class="sidebar-toggle js-sidebar-toggle">
+        <i class="hamburger align-self-center"></i>
+      </a>
+
+      <span class="navbar-brand d-none d-md-block ms-1">
+        <i class="fas fa-brain me-1"></i> Smart Monitor Class
+      </span>
+
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav ms-auto align-items-center">
+
+          <!-- System status -->
+          <li class="nav-item me-3 d-flex align-items-center gap-2">
+            <span class="smc-dot bg-danger" id="systemDot"></span>
+            <small class="text-muted" id="systemStatus">Offline</small>
+          </li>
+
+          <!-- Last update -->
+          <li class="nav-item me-3 d-none d-sm-flex align-items-center">
+            <i class="fas fa-clock text-muted me-1"></i>
+            <small class="text-muted">Cập nhật: <span id="lastUpdate">--</span></small>
+          </li>
+
+          <!-- Refresh button -->
+          <li class="nav-item">
+            <button id="refreshBtn" class="btn btn-sm btn-smc px-3" onclick="refreshData()">
+              <i class="fas fa-sync-alt me-1"></i> Làm mới
+            </button>
+          </li>
+
+          <!-- Logout -->
+          <li class="nav-item ms-2">
+            <a href="/logout" class="btn btn-sm btn-outline-secondary px-3"
+               title="Đăng xuất">
+              <i class="fas fa-sign-out-alt me-1"></i>
+              {{ session.get('user_name', 'Giáo viên') }}
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- ── END TOP NAVBAR ────────────────────────────────────── -->
+
+
+    <!-- ── PAGE CONTENT ──────────────────────────────────────── -->
+    <main class="content">
+      <div class="container-fluid p-0">
+
+        <div class="mb-4 px-3 pt-3">
+          <h4 class="mb-0 fw-bold">
+            <i class="fas fa-tachometer-alt me-2 text-primary"></i>Dashboard
+          </h4>
+          <small class="text-muted">Giám sát cảm xúc học sinh theo thời gian thực</small>
+        </div>
+
+        <!-- ── STAT CARDS ──────────────────────────────────── -->
+        <div class="row g-3 px-3 mb-4" id="overview">
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-1 small">Tổng số học sinh</h6>
+                    <div class="smc-stat-number" id="totalStudents">0</div>
+                    <small class="text-muted">Đang được theo dõi</small>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat-icon bg-primary bg-opacity-10 rounded-circle p-3">
+                      <i class="fas fa-users fa-lg text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-1 small">Độ vui vẻ TB</h6>
+                    <div class="smc-stat-number" id="avgHappiness">0%</div>
+                    <small class="text-muted">Happy score trung bình</small>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat-icon bg-warning bg-opacity-10 rounded-circle p-3">
+                      <i class="fas fa-smile fa-lg text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-1 small">Độ tự tin TB</h6>
+                    <div class="smc-stat-number" id="avgConfidence">0%</div>
+                    <small class="text-muted">Surprise score trung bình</small>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat-icon bg-success bg-opacity-10 rounded-circle p-3">
+                      <i class="fas fa-bolt fa-lg text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-1 small">Độ lo lắng TB</h6>
+                    <div class="smc-stat-number" id="avgFear">0%</div>
+                    <small class="text-muted">Fear score trung bình</small>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat-icon bg-danger bg-opacity-10 rounded-circle p-3">
+                      <i class="fas fa-exclamation-triangle fa-lg text-danger"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ── END STAT CARDS ──────────────────────────────── -->
+
+
+        <!-- ── DASHBOARD ROW: Chart + Positive Score + Camera ── -->
+        <div class="row g-3 px-3 mb-4">
+
+          <!-- Performance Chart -->
+          <div class="col-12 col-lg-5">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title mb-0">
+                  <i class="fas fa-chart-bar me-2 text-primary"></i>
+                  Phân Bố Hiệu Suất Học Tập
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="smc-chart-wrap">
+                  <canvas id="performanceChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Positive Score -->
+          <div class="col-12 col-sm-6 col-lg-2">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title mb-0">
+                  <i class="fas fa-smile me-2 text-success"></i>
+                  Cảm Xúc Tích Cực
+                </h5>
+              </div>
+              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center py-4">
+                <div id="positiveScore">0%</div>
+                <p class="text-muted mt-2 mb-0 small">Tích cực chung của lớp</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Camera / Video Monitor -->
+          <div class="col-12 col-sm-6 col-lg-5" id="camera-section">
+            <div class="card h-100">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="card-title mb-0">
+                  <i id="sourceIcon" class="fas {% if data_source == 'video' %}fa-film{% else %}fa-video{% endif %} me-2 text-primary"></i>
+                  <span id="sourceTitleText">{% if data_source == 'video' %}Video Phân Tích{% else %}Camera Giám Sát{% endif %}</span>
+                </h5>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="smc-dot bg-danger" id="statusDot"></span>
+                  <small class="text-muted" id="statusText">{% if data_source == 'video' %}Đang phân tích{% else %}Offline{% endif %}</small>
+                </div>
+              </div>
+              <div class="card-body d-flex flex-column gap-2">
+
+                <!-- Switch mode buttons -->
+                <div class="d-flex gap-2">
+                  <button id="switchToVideoBtn"
+                          class="btn btn-outline-secondary btn-sm flex-fill"
+                          onclick="switchMode('video')"
+                          {% if data_source == 'video' %}style="display:none"{% endif %}>
+                    <i class="fas fa-film me-1"></i> Video trong kho
+                  </button>
+                  <button id="switchToCameraBtn"
+                          class="btn btn-outline-primary btn-sm flex-fill"
+                          onclick="switchMode('camera')"
+                          {% if data_source != 'video' %}style="display:none"{% endif %}>
+                    <i class="fas fa-video me-1"></i> Camera trực tiếp
+                  </button>
+                </div>
+
+                <!-- Camera panel (visible in camera mode) -->
+                <div id="cameraPanel" {% if data_source == 'video' %}style="display:none"{% endif %}>
+                  <div class="smc-camera-wrap mb-2">
+                    <img id="videoFeed"
+                         src="{{ url_for('video_feed') }}"
+                         alt="Camera Feed"
+                         style="display:none">
+                    <div id="cameraPlaceholder" class="text-center text-muted p-4">
+                      <i class="fas fa-camera fa-3x mb-2 opacity-25"></i>
+                      <p class="mb-0 small">Nhấn "Bật Camera" để bắt đầu</p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button id="toggleBtn" class="btn btn-smc btn-sm flex-fill" onclick="toggleCamera()">
+                      <i class="fas fa-play me-1"></i> Bật Camera
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm flex-fill" onclick="captureImage()">
+                      <i class="fas fa-camera me-1"></i> Chụp Ảnh
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Video panel (visible in video mode) -->
+                <div id="videoPanel" {% if data_source != 'video' %}style="display:none"{% endif %}>
+                  <div class="alert alert-success d-flex align-items-center gap-3 mb-2">
+                    <div class="spinner-border spinner-border-sm text-success flex-shrink-0" role="status"></div>
+                    <div>
+                      <div class="fw-semibold small">Đang phân tích video</div>
+                      <div class="text-muted" style="font-size:0.78rem;" id="videoFileName">{{ video_file }}</div>
+                    </div>
+                  </div>
+                  <div class="text-muted text-center" style="font-size:0.8rem;">
+                    <i class="fas fa-sync-alt me-1"></i>
+                    Dữ liệu tự cập nhật mỗi 30 giây
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ── END DASHBOARD ROW ──────────────────────────────── -->
+
+
+        <!-- ── REPORT SECTION ─────────────────────────────────── -->
+        <div class="row g-3 px-3 mb-4" id="report-section">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">
+                  <i class="fas fa-file-alt me-2 text-primary"></i>
+                  Tạo Báo Cáo Lớp Học
+                </h5>
+              </div>
+              <div class="card-body">
+
+                <form method="POST" action="/">
+                  <div class="mb-3">
+                    <label for="input_text" class="form-label fw-semibold">
+                      <i class="fas fa-keyboard me-1 text-primary"></i>
+                      Dữ liệu cảm xúc:
+                    </label>
+                    <textarea
+                      class="form-control"
+                      id="input_text"
+                      name="input_text"
+                      rows="4"
+                      placeholder="Dữ liệu sẽ tự động cập nhật từ camera..."
+                    >{{ input_text or '' }}</textarea>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox"
+                           id="use_ai" name="use_ai"
+                           {% if use_ai %}checked{% endif %}>
+                    <label class="form-check-label" for="use_ai">
+                      <i class="fas fa-robot me-1"></i>
+                      Sử dụng AI (Gemini) để tối ưu hóa báo cáo
+                    </label>
+                  </div>
+
+                  <div class="d-flex gap-2 mb-4">
+                    <button type="submit" class="btn btn-smc">
+                      <i class="fas fa-magic me-1"></i> Tạo Báo Cáo
+                    </button>
+                    <button type="button" class="btn btn-success" onclick="generateReport()">
+                      <i class="fas fa-download me-1"></i> Xuất Báo Cáo
+                    </button>
+                  </div>
+                </form>
+
+                <h6 class="fw-semibold mb-2">
+                  <i class="fas fa-align-left me-1 text-primary"></i>
+                  Báo Cáo Tình Hình Chung Của Lớp
+                </h6>
+                <div id="mainReport">{% if report %}{{ report.strip() }}{% else %}Chưa có báo cáo. Vui lòng nhập dữ liệu và nhấn "Tạo Báo Cáo".{% endif %}</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ── END REPORT SECTION ─────────────────────────────── -->
+
+
+        <!-- ── STUDENTS TABLE ─────────────────────────────────── -->
+        <div class="row g-3 px-3 mb-4" id="students-section">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">
+                  <i class="fas fa-users me-2 text-primary"></i>
+                  Chi Tiết Cảm Xúc Từng Học Sinh
+                </h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0 smc-table">
+                    <thead>
+                      <tr>
+                        <th>Tên Học Sinh</th>
+                        <th>Tức Giận</th>
+                        <th>Ghê Tởm</th>
+                        <th>Sợ Hãi</th>
+                        <th>Vui Vẻ</th>
+                        <th>Buồn Bã</th>
+                        <th>Ngạc Nhiên</th>
+                        <th>Bình Thường</th>
+                      </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                      <tr>
+                        <td colspan="8" class="text-center text-muted py-4">
+                          <i class="fas fa-users fa-2x d-block mb-2 opacity-25"></i>
+                          Chưa có dữ liệu. Hãy bật camera để bắt đầu ghi nhận cảm xúc.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ── END STUDENTS TABLE ─────────────────────────────── -->
+
+      </div><!-- /container-fluid -->
+    </main>
+    <!-- ── END PAGE CONTENT ────────────────────────────────── -->
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row text-muted">
+          <div class="col-6 text-start">
+            <small>Smart Monitor Class &copy; 2024</small>
+          </div>
+          <div class="col-6 text-end">
+            <small>Powered by Flask + PyTorch + Claude AI</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /main -->
+</div><!-- /wrapper -->
+
+
+<script>
+  window.SMC_CONFIG = {
+    initialMode: "{{ data_source }}",
+    videoFile:   "{{ video_file }}"
+  };
+</script>
+<!-- AdminKit JS (Bootstrap + sidebar toggle) -->
+<script src="{{ url_for('static', filename='adminkit/js/app.js') }}"></script>
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<!-- Dashboard logic -->
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>

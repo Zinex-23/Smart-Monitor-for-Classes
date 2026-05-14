@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Smart Monitor Class - {{ t.realtime_monitor_sub }}">
+  <title>{% block title %}Smart Monitor Class{% endblock %}</title>
+
+  <!-- AdminKit CSS -->
+  <link href="{{ url_for('static', filename='adminkit/css/app.css') }}" rel="stylesheet">
+  <!-- Smart Monitor custom CSS -->
+  <link href="{{ url_for('static', filename='css/smart-monitor.css') }}" rel="stylesheet">
+  <!-- Font Awesome icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+<div id="toast-container"></div>
+
+<div class="wrapper">
+
+  <!-- ── SIDEBAR ──────────────────────────────────────────── -->
+  <nav id="sidebar" class="sidebar js-sidebar">
+    <div class="sidebar-content js-simplebar">
+
+      <a class="sidebar-brand" href="/">
+        <i class="fas fa-brain me-2"></i>
+        <span class="align-middle">Smart Monitor</span>
+      </a>
+
+      <ul class="sidebar-nav" style="padding-bottom: 100px;">
+        <li class="sidebar-header">{{ t.nav_title }}</li>
+
+        <li class="sidebar-item {{ 'active' if active_page == 'dashboard' else '' }}">
+          <a class="sidebar-link" href="/">
+            <i class="align-middle fas fa-tachometer-alt"></i>
+            <span class="align-middle">{{ t.dashboard }}</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item {{ 'active' if active_page == 'monitoring' else '' }}">
+          <a class="sidebar-link" href="/monitoring">
+            <i class="align-middle fas fa-video"></i>
+            <span class="align-middle">{{ t.monitoring }}</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item {{ 'active' if active_page == 'video_analysis' else '' }}">
+          <a class="sidebar-link" href="/video_analysis">
+            <i class="align-middle fas fa-film"></i>
+            <span class="align-middle">{{ t.video_analysis }}</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item {{ 'active' if active_page == 'reports' else '' }}">
+          <a class="sidebar-link" href="/reports">
+            <i class="align-middle fas fa-file-alt"></i>
+            <span class="align-middle">{{ t.reports }}</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item {{ 'active' if active_page == 'history' else '' }}">
+          <a class="sidebar-link" href="/history">
+            <i class="align-middle fas fa-history"></i>
+            <span class="align-middle">{{ t.history }}</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item {{ 'active' if active_page == 'settings' else '' }}">
+          <a class="sidebar-link" href="/settings">
+            <i class="align-middle fas fa-cog"></i>
+            <span class="align-middle">{{ t.settings }}</span>
+          </a>
+        </li>
+      </ul>
+
+    </div> <!-- /sidebar-content -->
+
+    <div class="sidebar-logout-container">
+      <div class="sidebar-header pt-0">{{ t.account }}</div>
+      <a class="sidebar-link" href="javascript:void(0)" onclick="confirmLogout()">
+        <i class="align-middle fas fa-sign-out-alt text-danger"></i>
+        <span class="align-middle text-danger fw-bold">{{ t.logout }}</span>
+      </a>
+    </div>
+  </nav>
+  <!-- ── END SIDEBAR ──────────────────────────────────────── -->
+
+
+  <!-- ── MAIN ─────────────────────────────────────────────── -->
+  <div class="main">
+
+    <!-- ── TOP NAVBAR ──────────────────────────────────────── -->
+    <nav class="navbar navbar-expand navbar-light navbar-bg">
+      <a class="sidebar-toggle js-sidebar-toggle">
+        <i class="hamburger align-self-center"></i>
+      </a>
+
+      <div class="ms-3 d-inline-block">
+        <h4 class="mb-0 fw-bold text-dark">
+          {% block navbar_title %}{% endblock %}
+        </h4>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav ms-auto align-items-center">
+
+          <!-- Language Switcher -->
+          <li class="nav-item me-3">
+            <div class="btn-group btn-group-sm" role="group">
+              <a href="/set_lang/vi" class="btn {{ 'btn-primary' if current_lang == 'vi' else 'btn-outline-primary' }}">VI</a>
+              <a href="/set_lang/en" class="btn {{ 'btn-primary' if current_lang == 'en' else 'btn-outline-primary' }}">EN</a>
+            </div>
+          </li>
+
+          <!-- User Info -->
+          <li class="nav-item ms-2">
+            <div class="btn btn-sm btn-outline-secondary px-3" style="cursor: default;">
+              <i class="fas fa-user-circle me-1"></i>
+              {{ session.get('user_name', t.teacher) }}
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- ── END TOP NAVBAR ────────────────────────────────────── -->
+
+
+    <!-- ── PAGE CONTENT ──────────────────────────────────────── -->
+    <main class="content">
+      <div class="container-fluid p-0">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    <!-- ── END PAGE CONTENT ────────────────────────────────── -->
+
+
+  </div><!-- /main -->
+</div><!-- /wrapper -->
+
+
+
+<script>
+  window.SMC_CONFIG = {
+    initialMode: "{{ data_source }}",
+    videoFile:   "{{ video_file }}"
+  };
+  window.T = {{ t_js | safe }};
+
+  function confirmLogout() {
+    document.body.style.overflow = 'hidden';
+    document.getElementById('logoutOverlay').style.display = 'flex';
+  }
+  function hideLogout() {
+    document.body.style.overflow = '';
+    document.getElementById('logoutOverlay').style.display = 'none';
+  }
+  
+  // Close on escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') hideLogout();
+  });
+</script>
+<!-- AdminKit JS (Bootstrap + sidebar toggle) -->
+<script src="{{ url_for('static', filename='adminkit/js/app.js') }}"></script>
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<!-- Dashboard logic -->
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% block scripts %}{% endblock %}
+
+<!-- Custom Logout Popup Overlay -->
+<div id="logoutOverlay" class="smc-modal-overlay" style="display: none;">
+  <div class="smc-modal-card">
+    <div class="smc-modal-icon">
+      <i class="fas fa-sign-out-alt"></i>
+    </div>
+    <h3>{{ t.logout_confirm_title }}</h3>
+    <p>{{ t.logout_confirm_msg }}</p>
+    <div class="smc-modal-actions">
+      <button class="btn btn-light" onclick="hideLogout()">{{ t.cancel }}</button>
+      <a href="/logout" class="btn btn-danger">{{ t.confirm }}</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ── GLOBAL SOFTENING & ANIMATIONS ─────────────────────── */
+  :root {
+    --smc-radius-xl: 24px;
+    --smc-radius-lg: 18px;
+    --smc-radius-md: 12px;
+    --smc-radius-sm: 8px;
+    --smc-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Soften corners globally */
+  .card, .card-header { border-radius: var(--smc-radius-lg) !important; border: none !important; }
+  .btn { border-radius: var(--smc-radius-md) !important; transition: var(--smc-transition); }
+  .card { transition: var(--smc-transition); }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08) !important; }
+  .navbar, .sidebar { transition: var(--smc-transition); }
+  .sidebar-link { border-radius: var(--smc-radius-md); margin: 4px 12px; padding: 12px 18px; transition: var(--smc-transition); display: flex; align-items: center; }
+  .sidebar-item.active .sidebar-link { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .progress { border-radius: 50px !important; }
+  .progress-bar { border-radius: 50px !important; }
+  
+  /* Soften btn-group */
+  .btn-group > .btn:first-child { border-top-left-radius: var(--smc-radius-md) !important; border-bottom-left-radius: var(--smc-radius-md) !important; }
+  .btn-group > .btn:last-child { border-top-right-radius: var(--smc-radius-md) !important; border-bottom-right-radius: var(--smc-radius-md) !important; }
+
+  .navbar { backdrop-filter: blur(8px); background: rgba(255,255,255,0.85) !important; border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+  /* Click animations */
+  .btn:active, .sidebar-link:active, .card:active {
+    transform: scale(0.96);
+  }
+
+  /* Custom modal overlay adjustments */
+  .smc-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.2s ease-out;
+    will-change: opacity;
+    backdrop-filter: blur(4px);
+  }
+  .smc-modal-card {
+    background: #fff;
+    width: 90%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: var(--smc-radius-xl);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .smc-modal-icon {
+    width: 64px; height: 64px;
+    background: #fff5f5;
+    color: #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 15px;
+  }
+  .smc-modal-card h3 { font-weight: 700; margin-bottom: 8px; color: #222; }
+  .smc-modal-card p { color: #777; margin-bottom: 25px; font-size: 0.95rem; }
+  .smc-modal-actions { display: flex; gap: 12px; }
+  .smc-modal-actions > * { flex: 1; padding: 10px 15px; border-radius: var(--smc-radius-md); font-weight: 600; text-decoration: none; }
+  
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleUp { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+</style>
+
+</body>
+</html>

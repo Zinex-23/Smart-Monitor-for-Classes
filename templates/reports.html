@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Báo cáo lớp học - Smart Monitor Class{% endblock %}
+
+{% block navbar_title %}
+  <i class="fas fa-file-alt me-2 text-primary"></i>{{ t.reports }}
+{% endblock %}
+
+{% block content %}
+<div class="mb-4 px-3 pt-2">
+  <small class="text-muted">{{ t.ai_analysis_sub }}</small>
+</div>
+
+<div class="row g-3 px-3 mb-4">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title mb-0">
+          <i class="fas fa-magic me-2 text-primary"></i>{{ t.detail_report }}
+        </h5>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/reports">
+          <div class="mb-3">
+            <label for="input_text" class="form-label fw-semibold">
+              <i class="fas fa-keyboard me-1 text-primary"></i>
+              {{ t.raw_data }}:
+            </label>
+            <textarea
+              class="form-control"
+              id="input_text"
+              name="input_text"
+              rows="6"
+              placeholder="..."
+            >{{ input_text or '' }}</textarea>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox"
+                   id="use_ai" name="use_ai" checked>
+            <label class="form-check-label fw-bold" for="use_ai">
+              <i class="fas fa-robot me-1 text-success"></i>
+              {{ t.ai_analysis }}
+            </label>
+          </div>
+
+          <div class="d-flex gap-3 mb-4">
+            <button type="submit" class="btn btn-smc btn-lg px-4">
+              <i class="fas fa-sync-alt me-2"></i> {{ t.create_report }}
+            </button>
+            <button type="button" class="btn btn-success btn-lg px-4" onclick="generateReport()">
+              <i class="fas fa-download me-2"></i> {{ t.export_file }}
+            </button>
+          </div>
+        </form>
+
+        <hr class="my-4">
+
+        <h5 class="fw-bold mb-3">
+          <i class="fas fa-align-left me-2 text-primary"></i>{{ t.detail_report }}
+        </h5>
+        <div id="mainReport" class="p-4 border rounded bg-light" style="min-height: 300px; white-space: pre-wrap;">
+          {% if report %}
+            {{ (report | report_lang(current_lang)) | safe }}
+          {% else %}
+            <div class="text-center text-muted py-5">
+              <i class="fas fa-file-signature fa-3x mb-3 opacity-25"></i>
+              <p class="mb-0">{{ t.no_report }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
