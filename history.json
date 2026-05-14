@@ -1,0 +1,602 @@
+[
+    {
+        "id": "1778632200",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1A",
+        "time_range": "07:30 - 08:15",
+        "date": "13/05/2026",
+        "ai_report": "Lớp 1A trong tiết Toán có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1A in the Toán period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 93,
+            "Neutral": 24,
+            "Sad": 3,
+            "Angry": 1,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778635200",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1A",
+        "time_range": "08:20 - 09:05",
+        "date": "13/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Tập đọc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Tập đọc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 71,
+            "Neutral": 22,
+            "Sad": 3,
+            "Angry": 1,
+            "Surprise": 6
+        }
+    },
+    {
+        "id": "1778638200",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1A",
+        "time_range": "09:10 - 09:55",
+        "date": "13/05/2026",
+        "ai_report": "Lớp 1A trong tiết Tập đọc có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1A in the Tập đọc period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 67,
+            "Neutral": 15,
+            "Sad": 5,
+            "Angry": 2,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778641200",
+        "username": "0",
+        "lesson_name": "Tiết Thủ công - Lớp 1A",
+        "time_range": "10:00 - 10:45",
+        "date": "13/05/2026",
+        "ai_report": "Học sinh lớp 1A thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Thủ công. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1A showed a serious attitude and high concentration in the Thủ công lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 82,
+            "Neutral": 21,
+            "Sad": 5,
+            "Angry": 0,
+            "Surprise": 3
+        }
+    },
+    {
+        "id": "1778653800",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "13/05/2026",
+        "ai_report": "Học sinh lớp 1B thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Toán. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1B showed a serious attitude and high concentration in the Toán lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 65,
+            "Neutral": 15,
+            "Sad": 4,
+            "Angry": 1,
+            "Surprise": 5
+        }
+    },
+    {
+        "id": "1778653800",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "13/05/2026",
+        "ai_report": "Không khí lớp 1B trong giờ Tập đọc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1B during Tập đọc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 69,
+            "Neutral": 23,
+            "Sad": 0,
+            "Angry": 2,
+            "Surprise": 9
+        }
+    },
+    {
+        "id": "1778653800",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "13/05/2026",
+        "ai_report": "Không khí lớp 1B trong giờ Tập đọc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1B during Tập đọc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 95,
+            "Neutral": 22,
+            "Sad": 0,
+            "Angry": 2,
+            "Surprise": 6
+        }
+    },
+    {
+        "id": "1778653800",
+        "username": "0",
+        "lesson_name": "Tiết Thủ công - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "13/05/2026",
+        "ai_report": "Học sinh lớp 1B thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Thủ công. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1B showed a serious attitude and high concentration in the Thủ công lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 77,
+            "Neutral": 19,
+            "Sad": 0,
+            "Angry": 1,
+            "Surprise": 2
+        }
+    },
+    {
+        "id": "1778545800",
+        "username": "0",
+        "lesson_name": "Tiết Chính tả - Lớp 1A",
+        "time_range": "07:30 - 08:15",
+        "date": "12/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Chính tả rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Chính tả was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 65,
+            "Neutral": 10,
+            "Sad": 5,
+            "Angry": 2,
+            "Surprise": 4
+        }
+    },
+    {
+        "id": "1778548800",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1A",
+        "time_range": "08:20 - 09:05",
+        "date": "12/05/2026",
+        "ai_report": "Tiết Toán diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1A. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Toán lesson proceeded stably and highly effectively. Data shows consistent focus across class 1A. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 71,
+            "Neutral": 12,
+            "Sad": 3,
+            "Angry": 2,
+            "Surprise": 6
+        }
+    },
+    {
+        "id": "1778551800",
+        "username": "0",
+        "lesson_name": "Tiết Tập viết - Lớp 1A",
+        "time_range": "09:10 - 09:55",
+        "date": "12/05/2026",
+        "ai_report": "Tiết Tập viết diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1A. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Tập viết lesson proceeded stably and highly effectively. Data shows consistent focus across class 1A. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 75,
+            "Neutral": 16,
+            "Sad": 5,
+            "Angry": 0,
+            "Surprise": 9
+        }
+    },
+    {
+        "id": "1778554800",
+        "username": "0",
+        "lesson_name": "Tiết TNXH - Lớp 1A",
+        "time_range": "10:00 - 10:45",
+        "date": "12/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ TNXH rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during TNXH was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 73,
+            "Neutral": 20,
+            "Sad": 0,
+            "Angry": 0,
+            "Surprise": 5
+        }
+    },
+    {
+        "id": "1778567400",
+        "username": "0",
+        "lesson_name": "Tiết Chính tả - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "12/05/2026",
+        "ai_report": "Học sinh lớp 1B thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Chính tả. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1B showed a serious attitude and high concentration in the Chính tả lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 85,
+            "Neutral": 25,
+            "Sad": 5,
+            "Angry": 1,
+            "Surprise": 6
+        }
+    },
+    {
+        "id": "1778567400",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "12/05/2026",
+        "ai_report": "Không khí lớp 1B trong giờ Toán rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1B during Toán was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 88,
+            "Neutral": 22,
+            "Sad": 5,
+            "Angry": 1,
+            "Surprise": 7
+        }
+    },
+    {
+        "id": "1778567400",
+        "username": "0",
+        "lesson_name": "Tiết Tập viết - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "12/05/2026",
+        "ai_report": "Tiết Tập viết diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1B. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Tập viết lesson proceeded stably and highly effectively. Data shows consistent focus across class 1B. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 75,
+            "Neutral": 25,
+            "Sad": 0,
+            "Angry": 1,
+            "Surprise": 4
+        }
+    },
+    {
+        "id": "1778567400",
+        "username": "0",
+        "lesson_name": "Tiết TNXH - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "12/05/2026",
+        "ai_report": "Lớp 1B trong tiết TNXH có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1B in the TNXH period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 85,
+            "Neutral": 16,
+            "Sad": 0,
+            "Angry": 0,
+            "Surprise": 6
+        }
+    },
+    {
+        "id": "1778459400",
+        "username": "0",
+        "lesson_name": "Tiết Âm nhạc - Lớp 1A",
+        "time_range": "07:30 - 08:15",
+        "date": "11/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Âm nhạc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Âm nhạc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 76,
+            "Neutral": 19,
+            "Sad": 5,
+            "Angry": 2,
+            "Surprise": 2
+        }
+    },
+    {
+        "id": "1778462400",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1A",
+        "time_range": "08:20 - 09:05",
+        "date": "11/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Tập đọc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Tập đọc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 60,
+            "Neutral": 19,
+            "Sad": 2,
+            "Angry": 1,
+            "Surprise": 2
+        }
+    },
+    {
+        "id": "1778465400",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1A",
+        "time_range": "09:10 - 09:55",
+        "date": "11/05/2026",
+        "ai_report": "Tiết Tập đọc diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1A. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Tập đọc lesson proceeded stably and highly effectively. Data shows consistent focus across class 1A. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 93,
+            "Neutral": 17,
+            "Sad": 2,
+            "Angry": 1,
+            "Surprise": 4
+        }
+    },
+    {
+        "id": "1778468400",
+        "username": "0",
+        "lesson_name": "Tiết Đạo đức - Lớp 1A",
+        "time_range": "10:00 - 10:45",
+        "date": "11/05/2026",
+        "ai_report": "Lớp 1A trong tiết Đạo đức có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1A in the Đạo đức period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 69,
+            "Neutral": 11,
+            "Sad": 4,
+            "Angry": 0,
+            "Surprise": 9
+        }
+    },
+    {
+        "id": "1778481000",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "11/05/2026",
+        "ai_report": "Lớp 1B trong tiết Tập đọc có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1B in the Tập đọc period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 90,
+            "Neutral": 19,
+            "Sad": 5,
+            "Angry": 2,
+            "Surprise": 6
+        }
+    },
+    {
+        "id": "1778481000",
+        "username": "0",
+        "lesson_name": "Tiết Âm nhạc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "11/05/2026",
+        "ai_report": "Tiết Âm nhạc diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1B. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Âm nhạc lesson proceeded stably and highly effectively. Data shows consistent focus across class 1B. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 92,
+            "Neutral": 25,
+            "Sad": 3,
+            "Angry": 2,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778481000",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "11/05/2026",
+        "ai_report": "Không khí lớp 1B trong giờ Tập đọc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1B during Tập đọc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 67,
+            "Neutral": 10,
+            "Sad": 3,
+            "Angry": 1,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778481000",
+        "username": "0",
+        "lesson_name": "Tiết Đạo đức - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "11/05/2026",
+        "ai_report": "Tiết Đạo đức diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1B. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Đạo đức lesson proceeded stably and highly effectively. Data shows consistent focus across class 1B. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 71,
+            "Neutral": 21,
+            "Sad": 2,
+            "Angry": 0,
+            "Surprise": 9
+        }
+    },
+    {
+        "id": "1778200200",
+        "username": "0",
+        "lesson_name": "Tiết Thể dục - Lớp 1A",
+        "time_range": "07:30 - 08:15",
+        "date": "08/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Thể dục rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Thể dục was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 72,
+            "Neutral": 12,
+            "Sad": 0,
+            "Angry": 0,
+            "Surprise": 2
+        }
+    },
+    {
+        "id": "1778203200",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1A",
+        "time_range": "08:20 - 09:05",
+        "date": "08/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Toán rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Toán was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 88,
+            "Neutral": 25,
+            "Sad": 0,
+            "Angry": 1,
+            "Surprise": 10
+        }
+    },
+    {
+        "id": "1778206200",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1A",
+        "time_range": "09:10 - 09:55",
+        "date": "08/05/2026",
+        "ai_report": "Lớp 1A trong tiết Tập đọc có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1A in the Tập đọc period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 86,
+            "Neutral": 14,
+            "Sad": 0,
+            "Angry": 1,
+            "Surprise": 10
+        }
+    },
+    {
+        "id": "1778209200",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1A",
+        "time_range": "10:00 - 10:45",
+        "date": "08/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Tập đọc rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Tập đọc was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 62,
+            "Neutral": 24,
+            "Sad": 5,
+            "Angry": 1,
+            "Surprise": 4
+        }
+    },
+    {
+        "id": "1778221800",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "08/05/2026",
+        "ai_report": "Lớp 1B trong tiết Toán có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1B in the Toán period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 69,
+            "Neutral": 22,
+            "Sad": 3,
+            "Angry": 0,
+            "Surprise": 10
+        }
+    },
+    {
+        "id": "1778221800",
+        "username": "0",
+        "lesson_name": "Tiết Thể dục - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "08/05/2026",
+        "ai_report": "Tiết Thể dục diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1B. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Thể dục lesson proceeded stably and highly effectively. Data shows consistent focus across class 1B. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 85,
+            "Neutral": 10,
+            "Sad": 4,
+            "Angry": 0,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778221800",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "08/05/2026",
+        "ai_report": "Học sinh lớp 1B thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Tập đọc. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1B showed a serious attitude and high concentration in the Tập đọc lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 74,
+            "Neutral": 12,
+            "Sad": 1,
+            "Angry": 0,
+            "Surprise": 3
+        }
+    },
+    {
+        "id": "1778221800",
+        "username": "0",
+        "lesson_name": "Tiết Tập đọc - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "08/05/2026",
+        "ai_report": "Lớp 1B trong tiết Tập đọc có không khí học tập rất sôi nổi và tích cực. Đa số học sinh đều hào hứng tham gia thảo luận nhóm, đưa ra những ý kiến đóng góp sâu sắc cho bài học. Giáo viên đã kiểm soát tốt nhịp độ giảng dạy, kết hợp linh hoạt giữa lý thuyết và thực hành giúp học sinh không cảm thấy mệt mỏi hay nhàm chán.\n\n[---LANG-SPLIT---]\n\nClass 1B in the Tập đọc period had a very lively and positive learning atmosphere. Most students were excited to participate in group discussions, contributing profound ideas to the lesson. The teacher controlled the teaching pace well, flexibly combining theory and practice to prevent students from feeling tired or bored.",
+        "emotion_stats": {
+            "Happy": 75,
+            "Neutral": 17,
+            "Sad": 3,
+            "Angry": 2,
+            "Surprise": 2
+        }
+    },
+    {
+        "id": "1778113800",
+        "username": "0",
+        "lesson_name": "Tiết Mỹ thuật - Lớp 1A",
+        "time_range": "07:30 - 08:15",
+        "date": "07/05/2026",
+        "ai_report": "Không khí lớp 1A trong giờ Mỹ thuật rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1A during Mỹ thuật was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 75,
+            "Neutral": 11,
+            "Sad": 3,
+            "Angry": 1,
+            "Surprise": 10
+        }
+    },
+    {
+        "id": "1778116800",
+        "username": "0",
+        "lesson_name": "Tiết Chính tả - Lớp 1A",
+        "time_range": "08:20 - 09:05",
+        "date": "07/05/2026",
+        "ai_report": "Học sinh lớp 1A thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Chính tả. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1A showed a serious attitude and high concentration in the Chính tả lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 91,
+            "Neutral": 13,
+            "Sad": 3,
+            "Angry": 0,
+            "Surprise": 10
+        }
+    },
+    {
+        "id": "1778119800",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1A",
+        "time_range": "09:10 - 09:55",
+        "date": "07/05/2026",
+        "ai_report": "Tiết Toán diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1A. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Toán lesson proceeded stably and highly effectively. Data shows consistent focus across class 1A. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 91,
+            "Neutral": 22,
+            "Sad": 2,
+            "Angry": 0,
+            "Surprise": 10
+        }
+    },
+    {
+        "id": "1778122800",
+        "username": "0",
+        "lesson_name": "Tiết Kể chuyện - Lớp 1A",
+        "time_range": "10:00 - 10:45",
+        "date": "07/05/2026",
+        "ai_report": "Học sinh lớp 1A thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Kể chuyện. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1A showed a serious attitude and high concentration in the Kể chuyện lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 87,
+            "Neutral": 16,
+            "Sad": 3,
+            "Angry": 1,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778135400",
+        "username": "0",
+        "lesson_name": "Tiết Chính tả - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "07/05/2026",
+        "ai_report": "Tiết Chính tả diễn ra ổn định và có hiệu quả cao. Dữ liệu cho thấy sự tập trung đồng đều của các thành viên lớp 1B. Một số học sinh ban đầu có biểu hiện hơi mệt mỏi nhưng đã nhanh chóng lấy lại sự hứng khởi sau khi tham gia vào các hoạt động tương tác. Điểm sáng của tiết học là sự tương tác hai chiều rất tốt giữa thầy và trò.\n\n[---LANG-SPLIT---]\n\nThe Chính tả lesson proceeded stably and highly effectively. Data shows consistent focus across class 1B. Some students initially appeared slightly tired but quickly regained excitement after engaging in interactive activities. The highlight of the lesson was the excellent two-way interaction between teacher and students.",
+        "emotion_stats": {
+            "Happy": 91,
+            "Neutral": 22,
+            "Sad": 4,
+            "Angry": 0,
+            "Surprise": 2
+        }
+    },
+    {
+        "id": "1778135400",
+        "username": "0",
+        "lesson_name": "Tiết Mỹ thuật - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "07/05/2026",
+        "ai_report": "Học sinh lớp 1B thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Mỹ thuật. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1B showed a serious attitude and high concentration in the Mỹ thuật lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 84,
+            "Neutral": 13,
+            "Sad": 2,
+            "Angry": 1,
+            "Surprise": 8
+        }
+    },
+    {
+        "id": "1778135400",
+        "username": "0",
+        "lesson_name": "Tiết Toán - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "07/05/2026",
+        "ai_report": "Học sinh lớp 1B thể hiện thái độ nghiêm túc và tập trung cao độ trong tiết học Toán. Các chỉ số cảm xúc cho thấy học sinh đang trong trạng thái tiếp thu kiến thức tốt nhất. Không có hiện tượng gây mất trật tự hay xao nhãng. Đây là một tiết học kiểu mẫu về sự kỷ luật và lòng ham học hỏi của tập thể lớp.\n\n[---LANG-SPLIT---]\n\nStudents in class 1B showed a serious attitude and high concentration in the Toán lesson. Emotion metrics indicate students are in their best state for knowledge absorption. No disruptions or distractions occurred. This was a model lesson in discipline and academic eagerness.",
+        "emotion_stats": {
+            "Happy": 95,
+            "Neutral": 19,
+            "Sad": 3,
+            "Angry": 2,
+            "Surprise": 3
+        }
+    },
+    {
+        "id": "1778135400",
+        "username": "0",
+        "lesson_name": "Tiết Kể chuyện - Lớp 1B",
+        "time_range": "13:30 - 14:15",
+        "date": "07/05/2026",
+        "ai_report": "Không khí lớp 1B trong giờ Kể chuyện rất thoải mái và sáng tạo. Việc áp dụng các công cụ trực quan đã kích thích sự tò mò và ngạc nhiên tích cực từ phía học sinh. Mặc dù có một vài thời điểm sự tập trung bị giảm sút nhẹ, nhưng nhìn chung tinh thần học tập vẫn duy trì ở mức cao suốt cả tiết học.\n\n[---LANG-SPLIT---]\n\nThe atmosphere in class 1B during Kể chuyện was very relaxed and creative. Applying visual tools stimulated positive curiosity and surprise from the students. Although there were a few moments of slight focus decline, overall learning spirit remained high throughout the period.",
+        "emotion_stats": {
+            "Happy": 84,
+            "Neutral": 25,
+            "Sad": 2,
+            "Angry": 1,
+            "Surprise": 7
+        }
+    }
+]

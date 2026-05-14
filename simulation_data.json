@@ -1,0 +1,662 @@
+[
+    {
+        "name": "Nguyễn Văn An",
+        "emotions": {
+            "Angry": {
+                "score": 0.19,
+                "duration": 1.98
+            },
+            "Disgust": {
+                "score": 0.22,
+                "duration": 1.98
+            },
+            "Fear": {
+                "score": 0.2,
+                "duration": 1.98
+            },
+            "Happy": {
+                "score": 0.86,
+                "duration": 11.85
+            },
+            "Sad": {
+                "score": 0.1,
+                "duration": 1.98
+            },
+            "Surprise": {
+                "score": 0.8,
+                "duration": 3.95
+            },
+            "Neutral": {
+                "score": 0.87,
+                "duration": 15.8
+            }
+        }
+    },
+    {
+        "name": "Trần Thị Bình",
+        "emotions": {
+            "Angry": {
+                "score": 0.22,
+                "duration": 2.05
+            },
+            "Disgust": {
+                "score": 0.13,
+                "duration": 2.05
+            },
+            "Fear": {
+                "score": 0.3,
+                "duration": 2.05
+            },
+            "Happy": {
+                "score": 0.92,
+                "duration": 12.33
+            },
+            "Sad": {
+                "score": 0.26,
+                "duration": 2.05
+            },
+            "Surprise": {
+                "score": 0.88,
+                "duration": 4.11
+            },
+            "Neutral": {
+                "score": 0.75,
+                "duration": 16.44
+            }
+        }
+    },
+    {
+        "name": "Lê Hoàng Cường",
+        "emotions": {
+            "Angry": {
+                "score": 0.11,
+                "duration": 2.23
+            },
+            "Disgust": {
+                "score": 0.1,
+                "duration": 2.23
+            },
+            "Fear": {
+                "score": 0.19,
+                "duration": 2.23
+            },
+            "Happy": {
+                "score": 0.94,
+                "duration": 13.37
+            },
+            "Sad": {
+                "score": 0.14,
+                "duration": 2.23
+            },
+            "Surprise": {
+                "score": 0.75,
+                "duration": 4.46
+            },
+            "Neutral": {
+                "score": 0.77,
+                "duration": 17.83
+            }
+        }
+    },
+    {
+        "name": "Phạm Minh Đức",
+        "emotions": {
+            "Angry": {
+                "score": 0.14,
+                "duration": 1.95
+            },
+            "Disgust": {
+                "score": 0.16,
+                "duration": 1.95
+            },
+            "Fear": {
+                "score": 0.2,
+                "duration": 1.95
+            },
+            "Happy": {
+                "score": 0.8,
+                "duration": 11.72
+            },
+            "Sad": {
+                "score": 0.25,
+                "duration": 1.95
+            },
+            "Surprise": {
+                "score": 0.73,
+                "duration": 3.91
+            },
+            "Neutral": {
+                "score": 0.89,
+                "duration": 15.63
+            }
+        }
+    },
+    {
+        "name": "Vũ Hải Yến",
+        "emotions": {
+            "Angry": {
+                "score": 0.37,
+                "duration": 1.91
+            },
+            "Disgust": {
+                "score": 0.3,
+                "duration": 1.91
+            },
+            "Fear": {
+                "score": 0.37,
+                "duration": 1.91
+            },
+            "Happy": {
+                "score": 0.79,
+                "duration": 7.65
+            },
+            "Sad": {
+                "score": 0.24,
+                "duration": 1.91
+            },
+            "Surprise": {
+                "score": 0.7,
+                "duration": 3.82
+            },
+            "Neutral": {
+                "score": 0.79,
+                "duration": 19.12
+            }
+        }
+    },
+    {
+        "name": "Đặng Quốc Khánh",
+        "emotions": {
+            "Angry": {
+                "score": 0.2,
+                "duration": 2.1
+            },
+            "Disgust": {
+                "score": 0.32,
+                "duration": 2.1
+            },
+            "Fear": {
+                "score": 0.38,
+                "duration": 2.1
+            },
+            "Happy": {
+                "score": 0.72,
+                "duration": 8.4
+            },
+            "Sad": {
+                "score": 0.34,
+                "duration": 2.1
+            },
+            "Surprise": {
+                "score": 0.79,
+                "duration": 4.2
+            },
+            "Neutral": {
+                "score": 0.89,
+                "duration": 20.99
+            }
+        }
+    },
+    {
+        "name": "Bùi Mai Chi",
+        "emotions": {
+            "Angry": {
+                "score": 0.3,
+                "duration": 1.52
+            },
+            "Disgust": {
+                "score": 0.25,
+                "duration": 1.52
+            },
+            "Fear": {
+                "score": 0.26,
+                "duration": 1.52
+            },
+            "Happy": {
+                "score": 0.71,
+                "duration": 6.09
+            },
+            "Sad": {
+                "score": 0.2,
+                "duration": 1.52
+            },
+            "Surprise": {
+                "score": 0.68,
+                "duration": 3.04
+            },
+            "Neutral": {
+                "score": 0.71,
+                "duration": 15.21
+            }
+        }
+    },
+    {
+        "name": "Đỗ Hữu Nghĩa",
+        "emotions": {
+            "Angry": {
+                "score": 0.26,
+                "duration": 1.77
+            },
+            "Disgust": {
+                "score": 0.24,
+                "duration": 1.77
+            },
+            "Fear": {
+                "score": 0.3,
+                "duration": 1.77
+            },
+            "Happy": {
+                "score": 0.78,
+                "duration": 7.09
+            },
+            "Sad": {
+                "score": 0.3,
+                "duration": 1.77
+            },
+            "Surprise": {
+                "score": 0.63,
+                "duration": 3.54
+            },
+            "Neutral": {
+                "score": 0.83,
+                "duration": 17.72
+            }
+        }
+    },
+    {
+        "name": "Ngô Thanh Tùng",
+        "emotions": {
+            "Angry": {
+                "score": 0.46,
+                "duration": 2.12
+            },
+            "Disgust": {
+                "score": 0.57,
+                "duration": 2.12
+            },
+            "Fear": {
+                "score": 0.53,
+                "duration": 2.12
+            },
+            "Happy": {
+                "score": 0.53,
+                "duration": 6.36
+            },
+            "Sad": {
+                "score": 0.51,
+                "duration": 2.12
+            },
+            "Surprise": {
+                "score": 0.7,
+                "duration": 2.12
+            },
+            "Neutral": {
+                "score": 0.87,
+                "duration": 25.43
+            }
+        }
+    },
+    {
+        "name": "Hoàng Kim Ngân",
+        "emotions": {
+            "Angry": {
+                "score": 0.46,
+                "duration": 2.11
+            },
+            "Disgust": {
+                "score": 0.45,
+                "duration": 2.11
+            },
+            "Fear": {
+                "score": 0.54,
+                "duration": 2.11
+            },
+            "Happy": {
+                "score": 0.66,
+                "duration": 6.32
+            },
+            "Sad": {
+                "score": 0.42,
+                "duration": 2.11
+            },
+            "Surprise": {
+                "score": 0.51,
+                "duration": 2.11
+            },
+            "Neutral": {
+                "score": 0.71,
+                "duration": 25.3
+            }
+        }
+    },
+    {
+        "name": "Lý Gia Bảo",
+        "emotions": {
+            "Angry": {
+                "score": 0.54,
+                "duration": 2.25
+            },
+            "Disgust": {
+                "score": 0.53,
+                "duration": 2.25
+            },
+            "Fear": {
+                "score": 0.47,
+                "duration": 2.25
+            },
+            "Happy": {
+                "score": 0.68,
+                "duration": 6.75
+            },
+            "Sad": {
+                "score": 0.55,
+                "duration": 2.25
+            },
+            "Surprise": {
+                "score": 0.55,
+                "duration": 2.25
+            },
+            "Neutral": {
+                "score": 0.76,
+                "duration": 26.99
+            }
+        }
+    },
+    {
+        "name": "Phan Anh Thư",
+        "emotions": {
+            "Angry": {
+                "score": 0.41,
+                "duration": 2.12
+            },
+            "Disgust": {
+                "score": 0.55,
+                "duration": 2.12
+            },
+            "Fear": {
+                "score": 0.56,
+                "duration": 2.12
+            },
+            "Happy": {
+                "score": 0.53,
+                "duration": 6.36
+            },
+            "Sad": {
+                "score": 0.47,
+                "duration": 2.12
+            },
+            "Surprise": {
+                "score": 0.51,
+                "duration": 2.12
+            },
+            "Neutral": {
+                "score": 0.74,
+                "duration": 25.43
+            }
+        }
+    },
+    {
+        "name": "Trịnh Minh Triết",
+        "emotions": {
+            "Angry": {
+                "score": 0.67,
+                "duration": 2.23
+            },
+            "Disgust": {
+                "score": 0.63,
+                "duration": 2.23
+            },
+            "Fear": {
+                "score": 0.73,
+                "duration": 4.46
+            },
+            "Happy": {
+                "score": 0.41,
+                "duration": 2.23
+            },
+            "Sad": {
+                "score": 0.68,
+                "duration": 8.92
+            },
+            "Surprise": {
+                "score": 0.44,
+                "duration": 2.23
+            },
+            "Neutral": {
+                "score": 0.77,
+                "duration": 22.3
+            }
+        }
+    },
+    {
+        "name": "Lương Thu Thảo",
+        "emotions": {
+            "Angry": {
+                "score": 0.79,
+                "duration": 1.86
+            },
+            "Disgust": {
+                "score": 0.64,
+                "duration": 1.86
+            },
+            "Fear": {
+                "score": 0.62,
+                "duration": 3.72
+            },
+            "Happy": {
+                "score": 0.44,
+                "duration": 1.86
+            },
+            "Sad": {
+                "score": 0.78,
+                "duration": 7.44
+            },
+            "Surprise": {
+                "score": 0.5,
+                "duration": 1.86
+            },
+            "Neutral": {
+                "score": 0.73,
+                "duration": 18.59
+            }
+        }
+    },
+    {
+        "name": "Võ Văn Hùng",
+        "emotions": {
+            "Angry": {
+                "score": 0.7,
+                "duration": 1.67
+            },
+            "Disgust": {
+                "score": 0.7,
+                "duration": 1.67
+            },
+            "Fear": {
+                "score": 0.66,
+                "duration": 3.33
+            },
+            "Happy": {
+                "score": 0.35,
+                "duration": 1.67
+            },
+            "Sad": {
+                "score": 0.67,
+                "duration": 6.66
+            },
+            "Surprise": {
+                "score": 0.38,
+                "duration": 1.67
+            },
+            "Neutral": {
+                "score": 0.67,
+                "duration": 16.65
+            }
+        }
+    },
+    {
+        "name": "Diệp Bảo Ngọc",
+        "emotions": {
+            "Angry": {
+                "score": 0.63,
+                "duration": 2.18
+            },
+            "Disgust": {
+                "score": 0.78,
+                "duration": 2.18
+            },
+            "Fear": {
+                "score": 0.66,
+                "duration": 4.36
+            },
+            "Happy": {
+                "score": 0.37,
+                "duration": 2.18
+            },
+            "Sad": {
+                "score": 0.68,
+                "duration": 8.73
+            },
+            "Surprise": {
+                "score": 0.47,
+                "duration": 2.18
+            },
+            "Neutral": {
+                "score": 0.71,
+                "duration": 21.82
+            }
+        }
+    },
+    {
+        "name": "Đào Quang Huy",
+        "emotions": {
+            "Angry": {
+                "score": 0.88,
+                "duration": 4.98
+            },
+            "Disgust": {
+                "score": 0.94,
+                "duration": 1.66
+            },
+            "Fear": {
+                "score": 0.8,
+                "duration": 3.32
+            },
+            "Happy": {
+                "score": 0.11,
+                "duration": 1.66
+            },
+            "Sad": {
+                "score": 0.94,
+                "duration": 4.98
+            },
+            "Surprise": {
+                "score": 0.28,
+                "duration": 1.66
+            },
+            "Neutral": {
+                "score": 0.56,
+                "duration": 16.6
+            }
+        }
+    },
+    {
+        "name": "Hà Trúc Linh",
+        "emotions": {
+            "Angry": {
+                "score": 0.93,
+                "duration": 6.21
+            },
+            "Disgust": {
+                "score": 0.84,
+                "duration": 2.07
+            },
+            "Fear": {
+                "score": 0.85,
+                "duration": 4.14
+            },
+            "Happy": {
+                "score": 0.25,
+                "duration": 2.07
+            },
+            "Sad": {
+                "score": 0.89,
+                "duration": 6.21
+            },
+            "Surprise": {
+                "score": 0.21,
+                "duration": 2.07
+            },
+            "Neutral": {
+                "score": 0.61,
+                "duration": 20.72
+            }
+        }
+    },
+    {
+        "name": "Tạ Minh Tâm",
+        "emotions": {
+            "Angry": {
+                "score": 0.83,
+                "duration": 4.61
+            },
+            "Disgust": {
+                "score": 0.8,
+                "duration": 1.54
+            },
+            "Fear": {
+                "score": 0.81,
+                "duration": 3.07
+            },
+            "Happy": {
+                "score": 0.29,
+                "duration": 1.54
+            },
+            "Sad": {
+                "score": 0.92,
+                "duration": 4.61
+            },
+            "Surprise": {
+                "score": 0.16,
+                "duration": 1.54
+            },
+            "Neutral": {
+                "score": 0.57,
+                "duration": 15.37
+            }
+        }
+    },
+    {
+        "name": "Quách Gia Huy",
+        "emotions": {
+            "Angry": {
+                "score": 0.89,
+                "duration": 5.84
+            },
+            "Disgust": {
+                "score": 0.91,
+                "duration": 1.95
+            },
+            "Fear": {
+                "score": 0.93,
+                "duration": 3.89
+            },
+            "Happy": {
+                "score": 0.21,
+                "duration": 1.95
+            },
+            "Sad": {
+                "score": 0.85,
+                "duration": 5.84
+            },
+            "Surprise": {
+                "score": 0.27,
+                "duration": 1.95
+            },
+            "Neutral": {
+                "score": 0.61,
+                "duration": 19.46
+            }
+        }
+    }
+]

@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Unknown",
+        "emotions": {
+            "Angry": {
+                "score": 0.76,
+                "duration": 27.92
+            },
+            "Disgust": {
+                "score": 0.71,
+                "duration": 30.49
+            },
+            "Fear": {
+                "score": 0.7,
+                "duration": 21.52
+            },
+            "Happy": {
+                "score": 0.66,
+                "duration": 24.84
+            },
+            "Sad": {
+                "score": 0.36,
+                "duration": 4657.09
+            },
+            "Surprise": {
+                "score": 0.65,
+                "duration": 55.98
+            },
+            "Neutral": {
+                "score": 0.77,
+                "duration": 8.94
+            }
+        }
+    },
+    {
+        "name": "Dien",
+        "emotions": {
+            "Angry": {
+                "score": 0.71,
+                "duration": 5.85
+            },
+            "Disgust": {
+                "score": 0.65,
+                "duration": 2.68
+            },
+            "Fear": {
+                "score": 0.64,
+                "duration": 4.55
+            },
+            "Happy": {
+                "score": 0.57,
+                "duration": 0.23
+            },
+            "Sad": {
+                "score": 0.63,
+                "duration": 1.38
+            },
+            "Surprise": {
+                "score": 0.47,
+                "duration": 0.74
+            },
+            "Neutral": {
+                "score": 0.61,
+                "duration": 0.3
+            }
+        }
+    },
+    {
+        "name": "KhaNgan",
+        "emotions": {
+            "Angry": {
+                "score": 0.46,
+                "duration": 2.65
+            },
+            "Disgust": {
+                "score": 0.63,
+                "duration": 15.4
+            },
+            "Fear": {
+                "score": 0.49,
+                "duration": 8.72
+            },
+            "Happy": {
+                "score": 0.65,
+                "duration": 14.18
+            },
+            "Sad": {
+                "score": 0.57,
+                "duration": 32.1
+            },
+            "Surprise": {
+                "score": 0.51,
+                "duration": 14.78
+            },
+            "Neutral": {
+                "score": 0.38,
+                "duration": 2.94
+            }
+        }
+    },
+    {
+        "name": "BaoAn",
+        "emotions": {
+            "Angry": {
+                "score": 0.58,
+                "duration": 1.2
+            },
+            "Sad": {
+                "score": 0.52,
+                "duration": 2.49
+            },
+            "Neutral": {
+                "score": 0.53,
+                "duration": 0.42
+            }
+        }
+    }
+]
