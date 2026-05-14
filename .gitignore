@@ -1,0 +1,35 @@
+# Environments
+.env
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Models and Large Files
+*.pth
+*.MOV
+*.pdf
+2aOboQVt7S836KzYgP18HlHzuXnF3OF07nXOUbTs
+
+# Data
+history.json
+emotion_per_person.json
+simulation_data.json
+temp/
+scratch/
+
+# IDEs
+.vscode/
+.idea/
+.claude/
+
+# External / Templates
+adminkit-dev/
